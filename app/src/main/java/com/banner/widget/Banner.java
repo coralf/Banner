@@ -33,9 +33,9 @@ public class Banner extends FrameLayout {
 
 
     //小圆点默认大小
-    public static final int POINTER_SIZE_DEF = 40;
+    public static final int POINTER_SIZE_DEF = 20;
     //小圆点默认边框大小
-    public static final int POINTER_BORDER_SIZE_DEF = 7;
+    public static final int POINTER_BORDER_SIZE_DEF = 2;
     //小圆点边框颜色
     public static final String POINTER_BORDER_COLOR_DEF = "#FFFFFF";
     //小圆点选中状态下颜色
@@ -174,6 +174,7 @@ public class Banner extends FrameLayout {
             View view = new View(context);
             view.setBackground(gradientDrawable);
             LayoutParams layoutParams = new LayoutParams(pointerSize, pointerSize);
+            layoutParams.setMarginStart(10);
             view.setLayoutParams(layoutParams);
             pointer.addView(view);
         }

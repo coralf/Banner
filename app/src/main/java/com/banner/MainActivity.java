@@ -20,13 +20,12 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
-    private int[] imgs = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d, R.drawable.e};
+    private int[] imgs = {R.drawable.a, R.drawable.b, R.drawable.c, R.drawable.d};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
         List<View> itemViews = new ArrayList<View>();
         for (int i = 0; i < imgs.length; i++) {
             ImageView imageView = new ImageView(this);
@@ -35,5 +34,6 @@ public class MainActivity extends AppCompatActivity {
         }
         Banner banner1 = new Banner(this, itemViews);
         banner1.setBackgroundColor(Color.parseColor("#3F51B5"));
+        this.addContentView(banner1,new LayoutParams(LayoutParams.MATCH_PARENT,450));
     }
 }
